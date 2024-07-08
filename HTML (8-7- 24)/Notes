@@ -1,0 +1,358 @@
+HTML is not a programming language it is a markup language 
+
+HTML is Hyper Text Markup language
+
+Hypter text : A special type of that document in which u can add hyperlink of another document 
+
+. Introduction to HTML
+HTML (HyperText Markup Language) is the standard markup language used to create web pages. It describes the structure of a web page using a series of elements.
+
+
+Basic Structure of an HTML Document
+Every HTML document has a basic structure, which includes the following elements:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+</head>
+<body>
+  <h1>This is a Heading</h1>
+  <p>This is a paragraph.</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>: Declares the document type and version of HTML.
+<html>: The root element of the HTML document.
+<head>: Contains meta-information about the document (e.g., title, character set).
+<title>: Sets the title of the document, which appears in the browser tab.
+<body>: Contains the content of the document that is displayed to the user.
+
+
+Tags : A simple mechanism way where u can tell what is the part of document actually mean 
+
+<TagName> => Opening tag 
+
+</TagName> => Closing tag 
+
+Some tags are used as self closing tag  <TagName/>
+
+In the self closing opening and closing will be managed by the same tag itself 
+
+
+Headings: Defined with <h1> to <h6> tags, where <h1> is the highest level and <h6> is the lowest.
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+
+
+Paragraphs: Defined with the <p> tag.
+
+<p>This is a paragraph.</p>
+
+
+Lists: Ordered lists (<ol>) and unordered lists (<ul>) with list items (<li>).
+
+<ul>
+  <li>First item in an unordered list</li>
+  <li>Second item</li>
+</ul>
+
+<ol>
+  <li>First item in an ordered list</li>
+  <li>Second item</li>
+</ol>
+
+
+Lists in HTML are used to group a set of related items. There are three main types of lists:
+
+Unordered Lists (<ul>): These lists display items with bullet points.
+Ordered Lists (<ol>): These lists display items with numbers or letters.
+Description Lists (<dl>): These lists display a list of terms and their descriptions.
+1. Unordered Lists
+Unordered lists are used to group a collection of items that do not have a specific order. Each item in the list is defined with the <li> (list item) tag.
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+
+This code will render as:
+
+Item 1
+Item 2
+Item 3
+
+
+Customizing Bullet Points:
+
+You can change the type of bullet points using the list-style-type CSS property. Common values include disc, circle, and square.
+
+<ul style="list-style-type: circle;">
+  <li>Circle Item 1</li>
+  <li>Circle Item 2</li>
+</ul>
+This code will render as:
+
+○ Circle Item 1
+○ Circle Item 2
+
+Ordered Lists
+Ordered lists are used to group a collection of items that have a specific order. Each item in the list is defined with the <li> (list item) tag, and the list itself is defined with the <ol> tag.
+
+Basic Ordered List Example:
+<ol>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ol>
+This code will render as:
+
+First item
+Second item
+Third item
+
+You can change the numbering style using the type attribute in the <ol> tag. Common values include 1, A, a, I, and i.
+
+<ol type="A">
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ol>
+
+This code will render as:
+
+A. First item
+B. Second item
+C. Third item
+
+Description Lists
+Description lists are used to define terms and their descriptions. These lists use the <dl> tag, with each term enclosed in a <dt> tag and each description enclosed in a <dd> tag.
+
+<dl>
+  <dt>HTML</dt>
+  <dd>A markup language for creating web pages.</dd>
+  <dt>CSS</dt>
+  <dd>A style sheet language for designing web pages.</dd>
+  <dt>JavaScript</dt>
+  <dd>A programming language for web development.</dd>
+</dl>
+
+Example of Nested Lists:
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2
+    <ul>
+      <li>Subitem 2.1</li>
+      <li>Subitem 2.2</li>
+    </ul>
+  </li>
+  <li>Item 3</li>
+</ul>
+
+
+Lists can be styled using CSS to create more visually appealing and functional designs.
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    ul.styled-list {
+      list-style-type: square;
+      margin: 20px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+    }
+
+    ul.styled-list li {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <ul class="styled-list">
+    <li>Styled Item 1</li>
+    <li>Styled Item 2</li>
+    <li>Styled Item 3</li>
+  </ul>
+</body>
+</html>
+
+Emmet is a powerful toolkit for web developers that can greatly speed up the coding process. It is particularly useful in HTML, allowing you to write shorthand code snippets that expand into full-fledged HTML structures. Here’s a guide to using Emmet in HTML:
+
+Basic Emmet Syntax
+Emmet abbreviations are like shortcuts that expand into full HTML elements. Here are some of the most commonly used Emmet features:
+
+Basic HTML Tags
+
+Element Creation:
+div expands to <div></div>
+p expands to <p></p>
+Adding Classes and IDs
+
+
+Class:
+div.classname expands to <div class="classname"></div>
+p.class1.class2 expands to <p class="class1 class2"></p>
+
+ID:
+div#idname expands to <div id="idname"></div>
+p#para1 expands to <p id="para1"></p>
+Nesting Elements
+Child Elements:
+
+div>p expands to <div><p></p></div>
+ul>li expands to <ul><li></li></ul>
+Sibling Elements:
+
+div+p expands to <div></div><p></p>
+h1+h2+h3 expands to <h1></h1><h2></h2><h3></h3>
+
+Multiplication and Numbering
+
+Multiplication:
+ul>li*3 expands to <ul><li></li><li></li><li></li></ul>
+
+Numbering:
+ul>li.item$*3 expands to <ul><li class="item1"></li><li class="item2"></li><li class="item3"></li></ul>
+
+Text and Attributes
+Adding Text:
+
+a{Click here} expands to <a>Click here</a>
+p{Hello World} expands to <p>Hello World</p>
+Adding Attributes:
+
+input[type="text"] expands to <input type="text">
+a[href="https://example.com"]{Visit} expands to <a href="https://example.com">Visit</a>
+
+
+
+
+Basic Image Insertion
+To add images to an HTML document, you use the <img> tag. This tag is self-closing and requires at least two attributes: src and alt.
+
+src (source): Specifies the path to the image file.
+alt (alternative text): Provides alternative text for the image if it cannot be displayed.
+
+<img src="image.jpg" alt="Description of the image">
+
+Image Attributes
+The <img> tag can include additional attributes to control the appearance and behavior of the image.
+
+Width and Height: Set the size of the image.
+Title: Adds a tooltip when the mouse hovers over the image.
+
+<img src="image.jpg" alt="Description of the image" width="300" height="200" title="Image Tooltip">
+
+Image Formats
+Common image formats used on the web include:
+
+JPEG: Good for photographs and images with many colors.
+PNG: Supports transparency and is good for images with fewer colors.
+GIF: Supports simple animations.
+SVG: Scalable Vector Graphics, used for vector images.
+WebP: Modern format providing superior compression for web images.
+
+<img src="image.webp" alt="Description of the image">
+
+Advanced Image Techniques
+
+Lazy Loading: Defer loading of images until they are about to enter the viewport.
+
+<img src="image.jpg" alt="Description of the image" loading="lazy">
+
+
+Inline and Block Elements in HTML: In-Depth Explanation
+HTML elements are broadly categorized into two types: inline elements and block-level elements. Understanding the difference between these two types is crucial for controlling the layout and behavior of elements on a web page.
+
+Block-Level Elements
+Block-level elements take up the full width available, stacking on top of each other, and start on a new line in the document. Common block-level elements include <div>, <p>, <h1> to <h6>, <ul>, <ol>, and <li>.
+
+Characteristics of Block-Level Elements:
+
+Occupy Full Width: By default, block-level elements extend the entire width of their parent container.
+Starts on a New Line: Each block-level element begins on a new line, creating a line break before and after the element.
+Contain Other Elements: Block-level elements can contain other block-level elements and inline elements.
+
+<div>
+  <h1>This is a heading</h1>
+  <p>This is a paragraph inside a div.</p>
+</div>
+<div>
+  <p>This is another paragraph in a new div.</p>
+</div>
+
+
+Inline Elements
+Inline elements only take up as much width as necessary and do not force a new line in the document flow. Common inline elements include <span>, <a>, <strong>, <em>, and <img>.
+
+Characteristics of Inline Elements:
+
+Occupy Only Necessary Width: Inline elements take up only as much width as their content requires.
+Do Not Start on a New Line: They do not create a new line before or after the element.
+Cannot Contain Block-Level Elements: Inline elements typically only contain other inline elements or text content.
+
+
+<p>This is a paragraph with an <a href="#">inline link</a> and some <strong>bold text</strong>.</p>
+
+
+The <div> and <span> Elements
+The <div> and <span> elements are generic containers used to group and style content. Their default display properties are block-level and inline, respectively.
+
+The <div> Element
+Display: Block-level element.
+Usage: Used to group block-level elements or to apply CSS styles to a section of content.
+
+Example:
+
+<div class="container">
+  <h2>Section Heading</h2>
+  <p>Some text inside a div.</p>
+  <p>Another paragraph inside the same div.</p>
+</div>
+
+CSS for <div>:
+.container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+
+The <span> Element
+Display: Inline element.
+Usage: Used to group inline elements or to apply CSS styles to a part of the text without disrupting the flow of the document.
+Example:
+
+<p>This is a <span class="highlight">highlighted text</span> within a paragraph.</p>
+
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+HTML Video and Audio: From Basic to Advanced
+1. Basic Video Embedding
+To embed a video in HTML, you use the <video> tag. This tag requires a src attribute for the video file, and it supports various attributes to control playback.
+
+
+
+
+
+
+
